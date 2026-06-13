@@ -1,0 +1,36 @@
+# AGENTS.md
+
+> Source of truth for AI agents in this repo. Follows the AGENTS.md open standard. Keep it short —
+> include only what an agent can't guess. Prune often.
+
+## Project overview
+<2-4 sentences: what this is, the stack, where the entry point and core logic live.>
+
+## Setup commands
+```bash
+<install>
+<dev>
+<build>
+```
+
+## Testing
+```bash
+<test-all>
+<test-one>
+```
+Run the relevant tests after a change and before claiming done. New behavior needs a test.
+
+## Code style
+- <only rules that differ from the language defaults>
+- <formatter> is the source of truth for formatting.
+
+## Structure & boundaries
+- `<dir>/` — <purpose>.
+- Don't edit <generated dir>; it's produced by <command>.
+
+## Git & PRs
+- Branch from `main`; branches named `<type>/<desc>`.
+- Commit messages in imperative mood, one logical change each.
+
+## Security
+- Secrets via env vars / `.env` (git-ignored). Never commit or log them.

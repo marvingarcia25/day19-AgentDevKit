@@ -1,0 +1,18 @@
+# CLAUDE.md
+
+Claude Code's entry point. Import the shared conventions, then add only Claude-specific notes.
+
+## Project conventions
+
+@AGENTS.md
+
+## Claude Code specifics
+
+- Delegate to the sub-agents in `.claude/agents/` for their specialty (planner, code-reviewer,
+  debugger, test-writer, security-reviewer, docs-writer).
+- Use the slash commands in `.claude/commands/` for standard workflows.
+- Hooks (`.claude/settings.json`) enforce formatting and protect sensitive paths.
+
+## Before saying "done"
+
+Run the project's tests and formatter (see AGENTS.md) and read the output before reporting success.

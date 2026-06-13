@@ -1,0 +1,45 @@
+{
+  "$note": "Team-shared Claude Code settings, checked into git. Personal overrides go in settings.local.json (git-ignored). Permissions are the enforcement layer — instructions in AGENTS.md are not. Docs: docs/hooks.md",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Bash(rm -rf:*)",
+      "Bash(git push --force:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/format.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/protect-paths.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+---
+name: my-agent
+description: When the main agent should delegate here. Be specific and action-oriented — this is the only thing the main agent reads to decide. Add "Use proactively" or "MUST BE USED" for eager delegation.
+tools: Read, Grep, Glob
+# model: sonnet        # optional: sonnet | opus | haiku | fable. Omit to inherit.
+# Omit `tools:` entirely to inherit ALL tools (usually not what you want for a specialist).
+---
+
+You are a <role>. Your job is to <one clear responsibility>.
+
+When invoked:
+
+1. <first concrete step — usually "read X" or "run Y to see the current state">
+2. <the core method, as ordered steps>
+3. <what to check / what good looks like>
+
+Output: <state the exact format you want the result in>.
+
+Constraints: <what NOT to do — e.g. "you are read-only; describe fixes, don't apply them">.

@@ -1,0 +1,17 @@
+---
+description: One-line description shown in the slash-command list
+argument-hint: <what the user should type after the command>
+# allowed-tools: Bash(git diff:*), Read, Grep   # optional: restrict tools for this command
+---
+
+<The prompt body the agent receives when the command runs.>
+
+Use $ARGUMENTS for everything typed after the command (or $1, $2 for positional args).
+
+Inline live shell output (runs before the agent sees the prompt):
+!`git status --short`
+
+Pull in a file's contents:
+@AGENTS.md
+
+<Then the instruction — e.g. "Following the conventions above, do X with $ARGUMENTS.">
