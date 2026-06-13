@@ -7,8 +7,6 @@ coding agents like **Claude Code**, **OpenAI Codex**, **Cursor**, and anything e
 [`AGENTS.md`](https://agents.md) standard — complete with ready-made sub-agents, slash commands,
 a reusable prompt library, MCP wiring, and the best practices baked in.
 
-> Day 19 of my 1000 days challenge. Day 18 was a framework for *building* an AI app; this one is
-> about *configuring the AI agents that build your apps*.
 
 ---
 
