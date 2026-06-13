@@ -38,7 +38,7 @@ AgentDevKit is the configuration a senior engineer would hand you on day one:
 
 ```bash
 # 1. Get the kit (copy it into a new or existing project)
-git clone https://github.com/<you>/agent-dev-kit my-project
+git clone https://github.com/marvingarcia25/day19-AgentDevKit my-project
 cd my-project
 
 # 2. Run setup — fills in project name, picks the tools you use, removes the rest
